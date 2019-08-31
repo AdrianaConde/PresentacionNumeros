@@ -9,7 +9,6 @@ class ImparesPage extends StatefulWidget {
 class _ImparesPage extends State <ImparesPage>{
   static int _counter=0;
   static int _numer=0;
-    static var _list = '';
   void _incrementImparCounter(){
     setState((){
       if(_counter!=0){
@@ -19,7 +18,6 @@ class _ImparesPage extends State <ImparesPage>{
       }
       _numer++;
     });
-    _list+= '$_numer)Numero Presentado: $_counter\n';
   }
   @override
  Widget build(BuildContext context) {
@@ -30,7 +28,6 @@ class _ImparesPage extends State <ImparesPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Text('$_list'),
             Text(
               'Numero impar: $_counter',
               style: Theme.of(context).textTheme.display1,
