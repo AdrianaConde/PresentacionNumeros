@@ -10,6 +10,7 @@ class _PrimosPage extends State <PrimosPage>{
   static int _primo=2;
   int _num=(_primo+1);
   int numP=1;
+  static var _list = '1) Numero Presentado: 2';
   void _incrementPrimoCounter(){
     bool _numeroPrimo=false;
     while ( _numeroPrimo==false){
@@ -22,6 +23,7 @@ class _PrimosPage extends State <PrimosPage>{
       }
       _num++;
     }
+    _list+= '$numP)Numero Presentado: $_primo\n';
   }
   bool _mostrarPrimo(int _num){
     int _cont=0;
@@ -46,6 +48,7 @@ class _PrimosPage extends State <PrimosPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('$_list'),
             Text(
               'Numero Primo: $_primo',
               style: Theme.of(context).textTheme.display1,

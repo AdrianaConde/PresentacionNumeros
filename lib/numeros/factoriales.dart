@@ -9,6 +9,7 @@ class FactorialesPage extends StatefulWidget {
 class _FactorialesPage extends State <FactorialesPage>{
   static int _counter=0;
   static int _numer=0;
+  static var _list = '';
   void _incrementFactCounter(){
     setState((){
       var _sum=_numer+1;
@@ -19,6 +20,7 @@ class _FactorialesPage extends State <FactorialesPage>{
       }
       _numer++;
     });
+    _list+= '$_numer)Numero Presentado: $_counter\n';
   }
   @override
  Widget build(BuildContext context) {
@@ -29,6 +31,7 @@ class _FactorialesPage extends State <FactorialesPage>{
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text('$_list'),
             Text(
               'factorial: $_counter',
               style: Theme.of(context).textTheme.display1,
